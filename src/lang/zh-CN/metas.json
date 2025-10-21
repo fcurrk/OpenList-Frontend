@@ -1,0 +1,12 @@
+{
+  "path": "路径",
+  "password": "密码",
+  "write": "写入",
+  "hide": "隐藏",
+  "readme": "说明",
+  "readme_help": "显示在底部,支持Markdown,包括文字与链接",
+  "header": "顶部说明",
+  "header_help": "显示在顶部,支持Markdown,包括文字与链接",
+  "apply_sub": "应用到子文件夹",
+  "hide_help": "每行一个正则表达式"
+}
