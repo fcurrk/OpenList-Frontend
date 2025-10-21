@@ -40,7 +40,7 @@ const Preview = () => {
       cover =
         obj.thumb ||
         getSetting("audio_cover") ||
-        "https://res.oplist.org/logo/logo.svg"
+        "https://cdn.jsdelivr.net/gh/fcurrk/alist-web@main/images/logo.svg"
     }
     const audio = {
       name: obj.name,

@@ -4,7 +4,7 @@
   "type": "module",
   "author": {
     "name": "The OpenList Projects Contributors",
-    "url": "https://github.com/OpenListTeam"
+    "url": "https://github.com/fcurrk"
   },
   "description": "A new AList Fork to Anti Trust Crisis",
   "packageManager": "pnpm@9.15.9",

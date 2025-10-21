@@ -43,7 +43,7 @@ const Login = () => {
   const logo = useColorModeValue(logos[0], logos.pop())
   const t = useT()
   const title = createMemo(() => {
-    return `${t("login.login_to")} ${getSetting("site_title")}`
+    return `${getSetting("site_title")}`
   })
   useTitle(title)
   const bgColor = useColorModeValue("white", "$neutral1")
@@ -232,7 +232,6 @@ const Login = () => {
         spacing="$4"
       >
         <Flex alignItems="center" justifyContent="space-around">
-          <Image mr="$2" boxSize="$12" src={logo()} />
           <Heading color="$info9" fontSize="$2xl">
             {title()}
           </Heading>
@@ -290,9 +289,6 @@ const Login = () => {
             >
               {t("login.remember")}
             </Checkbox>
-            <Text as="a" target="_blank" href={t("login.forget_url")}>
-              {t("login.forget")}
-            </Text>
           </Flex>
         </Show>
         <HStack w="$full" spacing="$2">

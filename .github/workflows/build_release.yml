@@ -18,17 +18,7 @@
 
 name: Release Build
 
-on:
-  push:
-    tags:
-      - "v[0-9]+.[0-9]+.[0-9]+*"
-  workflow_dispatch:
-    inputs:
-      version:
-        description: |
-          Target version (e.g., 1.0.0), will create a tag named 'v<version>' and update package.json version
-        required: true
-        type: string
+on: workflow_dispatch
 
 jobs:
   release:

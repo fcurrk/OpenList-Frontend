@@ -5,8 +5,8 @@
   "name": "OpenList",
   "icons": [
     {
-      "src": "https://res.oplist.org/logo/512x512.png",
-      "sizes": "512x512",
+      "src": "https://cdn.jsdelivr.net/gh/fcurrk/alist-web@main/images/logo.png",
+      "sizes": "128x128",
       "type": "image/png"
     }
   ]

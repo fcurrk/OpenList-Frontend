@@ -1,16 +1,6 @@
 name: Sync i18n files
 
-on:
-  schedule:
-    - cron: "0 12 * * *"
-  push:
-    branches: [main]
-    paths:
-      - "src/lang/en/**"
-  pull_request:
-    paths:
-      - ".github/workflows/i18n*.yml"
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   sync_i18n:
