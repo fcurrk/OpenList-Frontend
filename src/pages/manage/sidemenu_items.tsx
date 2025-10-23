@@ -207,13 +207,6 @@ export const side_menu_items: SideMenuItem[] = [
     component: lazy(() => import("./About")),
   },
   {
-    title: "manage.sidemenu.docs",
-    icon: FaSolidBook,
-    to: "https://doc.oplist.org",
-    role: UserRole.GUEST,
-    external: true,
-  },
-  {
     title: "manage.sidemenu.home",
     icon: IoHome,
     to: "/",
