@@ -608,9 +608,9 @@
     "upload_thread-tips": "1 ≤ 线程 ≤ 32"
   },
   "HalalCloudOpen": {
-    "client_id": "客户端 ID,
+    "client_id": "客户端 ID",
     "client_secret": "客户端证书",
-    "host": "Host",
+    "host": "主机",
     "refresh_token": "刷新令牌",
     "refresh_token-tips": "如果使用个人API则不需要刷新令牌",
     "root_folder_path": "根文件夹路径",
