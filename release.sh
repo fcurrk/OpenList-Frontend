@@ -14,3 +14,9 @@ cd ..
 mkdir compress
 tar -czvf compress/dist.tar.gz dist/*
 zip -r compress/dist.zip dist/*
+
+cd OpenList-Frontend
+rm -rf dist/*
+pnpm build:lite
+tar -czvf compress/dist-lite.tar.gz dist/*
+zip -r compress/dist-lite.zip dist/*

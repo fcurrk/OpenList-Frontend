@@ -41,7 +41,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: compress/*
-          tag_name: "v3"
+          tag_name: "v4"
           body: "Synchronize source updates."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
