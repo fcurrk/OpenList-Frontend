@@ -1,0 +1,47 @@
+name: release
+
+on: workflow_dispatch
+
+jobs:
+  release:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest]
+    name: Release
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org"
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 9
+          run_install: false
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: OpenList-Frontend
+          persist-credentials: false
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Build
+        run: |
+          mv OpenList-Frontend/release.sh .
+          bash release.sh
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: compress/*
+          tag_name: "v3"
+          body: "Synchronize source updates."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
