@@ -185,7 +185,8 @@
       "direct": "直接打开",
       "dblclick": "双击",
       "disable_while_checked": "选中时禁用"
-    }
+    },
+    "editor_font_size": "编缉器字体大小"
   },
   "package_download": {
     "current_status": "当前状态",

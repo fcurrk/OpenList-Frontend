@@ -14,7 +14,7 @@ const About = () => {
       </HStack>
       <HStack spacing="$2">
         <Text color="$info9">
-          {t("©2023 ")} {getSetting("site_title")} {t("v")}{getSetting("version")}
+          {t("©2025 ")} {getSetting("site_title")} {t("v")}{getSetting("version")}
         </Text>
       </HStack>
     </VStack>
