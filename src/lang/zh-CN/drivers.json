@@ -85,6 +85,8 @@
     "UploadThread": "上传线程",
     "UploadThread-tips": "上传线程的数量",
     "password": "密码",
+    "platform": "平台",
+    "platform-tips": "平台Header, 随API请求一起发送",
     "root_folder_id": "根文件夹 ID",
     "username": "用户名"
   },
@@ -813,6 +815,7 @@
   "OpenList": {
     "forward_archive_requests": "转发压缩文件请求",
     "meta_password": "元信息密码",
+    "pass_ip_to_upsteam": "向上游转发IP",
     "pass_ua_to_upsteam": "传递 UA 至上游",
     "password": "密码",
     "root_folder_path": "根文件夹路径",
@@ -854,6 +857,15 @@
     "share_id": "分享 ID",
     "share_pwd": "分享密码",
     "use_transcoding_address": "使用转码地址"
+  },
+  "ProtonDrive": {
+    "chunk_size": "分片大小",
+    "email": "邮箱",
+    "password": "密码",
+    "root_folder_id": "根文件夹 ID",
+    "two_fa_code": "二步验证",
+    "use_reusable_login": "使用登录凭据登录",
+    "use_reusable_login-tips": "使用可重用的登录凭据代替用户名/密码登录"
   },
   "Quark": {
     "cookie": "Cookie",
@@ -969,17 +981,21 @@
     "username": "用户名"
   },
   "Strm": {
+    "SaveStrmLocalPath": "Strm文件本地路径",
+    "SaveStrmLocalPath-tips": "Strm文件本地存储路径",
+    "SaveStrmToLocal": "保存Strm文件到本地",
+    "SaveStrmToLocal-tips": "保存Strm文件到本地",
     "downloadFileTypes": "下载文件类型",
     "downloadFileTypes-tips": "需要使用 Strm 流下载的文件（通常是字幕）",
     "encodePath": "编码路径",
     "encodePath-tips": "在 Strm 文件中编码路径",
     "filterFileTypes": "过滤文件类型",
     "filterFileTypes-tips": "支持 Strm 文件的后缀名",
-    "localModel": "本地模式",
-    "localModel-tips": "启用本地模式",
     "paths": "路径",
     "siteUrl": "站点 URL",
-    "siteUrl-tips": "Strm 文件的前缀 URL"
+    "siteUrl-tips": "Strm 文件的前缀 URL",
+    "withoutUrl": "无URL前缀",
+    "withoutUrl-tips": "无URL前缀的Strm 文件"
   },
   "Teambition": {
     "cookie": "Cookie",
@@ -1043,6 +1059,8 @@
     "device_id": "设备 ID",
     "password": "密码",
     "root_folder_id": "根文件夹 ID",
+    "space": "空间",
+    "space-tips": "远程设备ID",
     "username": "用户名"
   },
   "ThunderBrowser": {
@@ -1099,6 +1117,8 @@
       "algorithms": "算法",
       "captcha_sign": "验证码签名"
     },
+    "space": "空间",
+    "space-tips": "远程设备ID",
     "timestamp": "时间戳",
     "timestamp-tips": "签名类型是验证码签名，此为必填项",
     "use_fluent_play": "使用流畅播接口",
@@ -1169,9 +1189,9 @@
     },
     "package_name": "包名",
     "password": "密码",
-    "password-tips": "登录类型是用户名,此为必填项",
+    "password-tips": "登录类型是用户名，此为必填项",
     "refresh_token": "刷新令牌",
-    "refresh_token-tips": "登录类型是刷新令牌,此为必填项",
+    "refresh_token-tips": "登录类型是刷新令牌，此为必填项",
     "root_folder_id": "根文件夹 ID",
     "sign_type": "签名类型",
     "sign_types": {
@@ -1379,6 +1399,7 @@
     "OpenListShare": {},
     "PikPak": {},
     "PikPakShare": {},
+    "ProtonDrive": {},
     "Quark": {},
     "QuarkOpen": {},
     "QuarkTV": {},
@@ -1464,6 +1485,7 @@
     "OpenListShare": "OpenList 分享",
     "PikPak": "PikPak",
     "PikPakShare": "PikPak 分享",
+    "ProtonDrive": "ProtonDrive",
     "Quark": "夸克",
     "QuarkOpen": "夸克网盘 Open",
     "QuarkTV": "Quark TV",
