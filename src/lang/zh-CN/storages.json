@@ -33,10 +33,10 @@
       "asc": "升序",
       "desc": "降序"
     },
-    "extract_folder": "提取文件夹",
+    "extract_folder": "文件夹排序方式",
     "extract_folders": {
-      "front": "提取到最前",
-      "back": "提取到最后"
+      "front": "文件夹置顶",
+      "back": "文件夹置底"
     },
     "enable_sign": "启用签名",
     "disable_index": "禁用索引"

@@ -333,6 +333,8 @@
     "upload_api": "上传 API",
     "upload_thread": "上传线程",
     "upload_thread-tips": "1 ≤ 线程 ≤ 32",
+    "use_dynamic_upload_api": "使用动态上传接口",
+    "use_dynamic_upload_api-tips": "动态获取上传API域名，启用时，如果获取失败，将使用“上传API”设置作为备用方案",
     "use_online_api": "使用在线 API"
   },
   "BaiduPhoto": {
@@ -571,6 +573,8 @@
     "show_all_version-tips": "显示所有版本",
     "show_readme": "显示README",
     "show_readme-tips": "显示 README、LICENSE 文件",
+    "show_source_code": "显示源代码",
+    "show_source_code-tips": "显示源代码(zip/tar.gz)",
     "token": "令牌",
     "token-tips": "GitHub 令牌，如果您想要访问私有仓库或提高费率限制"
   },
@@ -775,6 +779,8 @@
     "custom_host": "自定义主机",
     "custom_host-tips": "自定义加速下载链接",
     "disable_disk_usage": "禁用剩余空间显示",
+    "enable_direct_upload": "启用直接上传",
+    "enable_direct_upload-tips": "启用从客户端直接上传到OneDrive",
     "is_sharepoint": "是否 SharePoint",
     "redirect_uri": "重定向 URI",
     "refresh_token": "刷新令牌",
@@ -802,6 +808,8 @@
     "custom_host-tips": "自定义加速下载链接",
     "disable_disk_usage": "禁用剩余空间显示",
     "email": "邮箱",
+    "enable_direct_upload": "启用直接上传",
+    "enable_direct_upload-tips": "启用从客户端直接上传到OneDrive",
     "region": "地区",
     "regions": {
       "cn": "世纪互联",
