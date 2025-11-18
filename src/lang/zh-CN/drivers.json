@@ -465,7 +465,9 @@
     "add_filename_to_disposition-tips": "添加 Filename 到 Content-Disposition 头中。",
     "bucket": "存储桶",
     "custom_host": "自定义主机",
+    "direct_upload_host": "直传主机",
     "enable_custom_host_presign": "启用自定义主机签名",
+    "enable_direct_upload": "允许直传",
     "endpoint": "端点",
     "force_path_style": "强制路径样式",
     "list_object_version": "列出对象版本",
@@ -489,6 +491,8 @@
       "get_download_info": "获取下载信息",
       "get_file_url": "获取文件链接"
     },
+    "limit_rate": "限速",
+    "limit_rate-tips": "限制所有API请求速率([速率]r/1s)",
     "root_folder_id": "根文件夹 ID",
     "upload_thread": "上传线程"
   },
@@ -808,7 +812,7 @@
     "custom_host-tips": "自定义加速下载链接",
     "disable_disk_usage": "禁用剩余空间显示",
     "email": "邮箱",
-    "enable_direct_upload": "启用直接上传",
+    "enable_direct_upload": "允许直传",
     "enable_direct_upload-tips": "启用从客户端直接上传到OneDrive",
     "region": "地区",
     "regions": {
@@ -946,7 +950,9 @@
     "add_filename_to_disposition-tips": "添加 Filename 到 Content-Disposition 头中。",
     "bucket": "存储桶",
     "custom_host": "自定义主机",
+    "direct_upload_host": "直传主机",
     "enable_custom_host_presign": "启用自定义主机预签名",
+    "enable_direct_upload": "允许直传",
     "endpoint": "端点",
     "force_path_style": "强制路径样式",
     "list_object_version": "列出对象版本",
