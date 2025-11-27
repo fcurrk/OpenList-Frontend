@@ -194,6 +194,7 @@
   "conflict_policy": {
     "cancel_if_exists": "如果文件存在则取消",
     "overwrite_existing": "覆盖现有文件",
-    "skip_existing": "跳过现有文件"
+    "skip_existing": "跳过现有文件",
+    "merge": "仅复制新文件和子目录"
   }
 }

@@ -333,6 +333,8 @@
     "upload_api": "上传 API",
     "upload_thread": "上传线程",
     "upload_thread-tips": "1 ≤ 线程 ≤ 32",
+    "upload_timeout": "上传超时",
+    "upload_timeout-tips": "分片上传超时时间(秒)",
     "use_dynamic_upload_api": "使用动态上传接口",
     "use_dynamic_upload_api-tips": "动态获取上传API域名，启用时，如果获取失败，将使用“上传API”设置作为备用方案",
     "use_online_api": "使用在线 API"
@@ -995,6 +997,10 @@
     "username": "用户名"
   },
   "Strm": {
+    "KeepLocalDownloadFile": "保留本地下载文件",
+    "KeepLocalDownloadFile-tips": "保留本地下载文件",
+    "PathPrefix": "路径前缀",
+    "PathPrefix-tips": "路径前缀",
     "SaveStrmLocalPath": "Strm文件本地路径",
     "SaveStrmLocalPath-tips": "Strm文件本地存储路径",
     "SaveStrmToLocal": "保存Strm文件到本地",
