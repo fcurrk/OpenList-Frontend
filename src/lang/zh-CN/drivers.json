@@ -299,6 +299,7 @@
     "container_name-tips": "Azure 存储容器名称（需在 Azure 门户中创建，路径：数据存储 > 容器）。https://learn.microsoft.com/azure/storage/blobs/blob-containers-portal",
     "endpoint": "端点",
     "endpoint-tips": "例如：https://accountname.blob.core.windows.net/。Azure 存储的完整端点 URL，包括唯一的存储帐户名称（3~24 个数字和小写字母）。",
+    "root_folder_path": "根文件夹路径",
     "sign_url_expire": "签名链接有效期",
     "sign_url_expire-tips": "SAS URLs 的到期时间，以小时为单位。"
   },
@@ -356,7 +357,7 @@
     "default_branch": "默认分支",
     "default_branch-tips": "新发行版的默认分支",
     "repo": "仓库",
-    "root_folder_path": "根文件夹路径",
+    "root_folder_id": "根文件夹ID",
     "token": "令牌",
     "use_tag_name": "使用 Tag 名称",
     "use_tag_name-tips": "使用原始的 Tag 名称而不是 Release 名称"
@@ -574,7 +575,7 @@
     "gh_proxy-tips": "GitHub 代理，如：https://ghproxy.net/github.com 或 https://gh-proxy.com/github.com ",
     "repo_structure": "仓库结构",
     "repo_structure-tips": "结构：[路径：]org/repo",
-    "root_folder_id": "根文件夹 ID",
+    "root_folder_path": "根文件夹路径",
     "show_all_version": "显示所有版本",
     "show_all_version-tips": "显示所有版本",
     "show_readme": "显示README",
@@ -705,7 +706,7 @@
   "MediaFire": {
     "chunk_size": "分片大小",
     "cookie": "Cookie",
-    "cookie-tips": "导航需要使用",
+    "cookie-tips": "MediaFire API认证需要使用",
     "limit_rate": "限制速率",
     "limit_rate-tips": "限制所有 API 请求速率（[limit]r/1s）",
     "order_by": "排序",
@@ -721,7 +722,7 @@
     },
     "root_folder_path": "根文件夹路径",
     "session_token": "会话令牌",
-    "session_token-tips": "MediaFire API 需要",
+    "session_token-tips": "MediaFire API可选，可从cookie中自动获取",
     "upload_threads": "上传线程",
     "upload_threads-tips": "上传并发请求"
   },
