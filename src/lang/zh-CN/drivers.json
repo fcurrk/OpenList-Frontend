@@ -109,6 +109,9 @@
     "cloud_id": "Cloud ID",
     "custom_upload_part_size": "自定义上传分片大小",
     "custom_upload_part_size-tips": "0 为自动设置",
+    "mail_cookies": "邮箱Cookies",
+    "mail_cookies-tips": "来自mail.139.com的Cookie用于登录认证。",
+    "password": "密码",
     "report_real_size": "报告文件实际大小",
     "report_real_size-tips": "启用在上传时报告真实文件大小",
     "root_folder_id": "根文件夹 ID",
@@ -122,7 +125,8 @@
     "use_large_thumbnail": "使用大缩略图",
     "use_large_thumbnail-tips": "启用图片大缩略图",
     "user_domain_id": "用户域 ID",
-    "user_domain_id-tips": "Cookie中的ud_id项，需要查看空间使用情况则填写"
+    "user_domain_id-tips": "Cookie中的ud_id项，需要查看空间使用情况则填写",
+    "username": "用户名"
   },
   "189Cloud": {
     "cookie": "Cookie",
@@ -195,6 +199,17 @@
     },
     "upload_thread": "上传线程",
     "upload_thread-tips": "1 ≤ 线程 ≤ 32"
+  },
+  "AList V3": {
+    "forward_archive_requests": "转发存档请求",
+    "meta_password": "元密码",
+    "pass_ip_to_upsteam": "上传IP给上游",
+    "pass_ua_to_upsteam": "上传UA给上游",
+    "password": "密码",
+    "root_folder_path": "根文件夹路径",
+    "token": "令牌",
+    "url": "URL链接",
+    "username": "用户名"
   },
   "Alias": {
     "details_pass_through": "后端驱动详细信息穿透",
@@ -1290,6 +1305,15 @@
     "num_folder": "文件夹数量",
     "root_folder_path": "根文件夹路径"
   },
+  "WPS": {
+    "cookie": "Cookie",
+    "mode": "模式",
+    "modes": {
+      "Business": "商业版",
+      "Personal": "个人版"
+    },
+    "root_folder_path": "根文件夹路径"
+  },
   "WebDav": {
     "address": "地址",
     "password": "密码",
@@ -1370,6 +1394,7 @@
     },
     "189CloudPC": {},
     "189CloudTV": {},
+    "AList V3": {},
     "Alias": {},
     "Aliyundrive": {
       "alert": "在这个驱动中可能有一个死循环的错误。\n已废弃，不再维护，并将在未来的版本中移除。\n我们建议使用官方支持的阿里云盘 Open。"
@@ -1443,6 +1468,7 @@
     "USS": {},
     "UrlTree": {},
     "Virtual": {},
+    "WPS": {},
     "WebDav": {},
     "WeiYun": {},
     "WoPan": {},
@@ -1460,6 +1486,7 @@
     "189Cloud": "天翼云盘",
     "189CloudPC": "天翼云盘客户端",
     "189CloudTV": "天翼云盘 TV",
+    "AList V3": "AList V3",
     "Alias": "别名",
     "Aliyundrive": "阿里云盘",
     "AliyundriveOpen": "阿里云盘（Oauth2）",
@@ -1529,6 +1556,7 @@
     "USS": "又拍云存储",
     "UrlTree": "地址树",
     "Virtual": "虚拟存储",
+    "WPS": "WPS",
     "WebDav": "WebDAV",
     "WeiYun": "腾讯微云",
     "WoPan": "联通云盘",

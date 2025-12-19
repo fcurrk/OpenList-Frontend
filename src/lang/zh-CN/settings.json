@@ -51,6 +51,7 @@
   "ldap_manager_dn": "LDAP 管理器 DN",
   "ldap_manager_password": "LDAP 管理员密码",
   "ldap_server": "LDAP 服务器",
+  "ldap_skip_tls_verify": "LDAP 忽略TLS验证",
   "ldap_user_search_base": "LDAP 用户搜索基础",
   "ldap_user_search_filter": "LDAP 用户搜索过滤器",
   "link_expiration": "直链有效期",
