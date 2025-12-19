@@ -87,6 +87,8 @@
   "s3_access_key_id": "S3 访问密钥 ID",
   "s3_buckets": "S3 存储桶",
   "s3_secret_access_key": "S3 访问密钥",
+  "s3_generate": "生成ID密钥",
+  "s3_restart_to_apply": "重新启动才可应用设置",
   "search_index": "搜索索引",
   "search_indexs": {
     "bleve": "Bleve",

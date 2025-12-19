@@ -164,7 +164,8 @@
       "direct": "Direct",
       "dblclick": "Double click",
       "disable_while_checked": "Disable while checked"
-    }
+    },
+    "editor_font_size": "Editor font size"
   },
   "package_download": {
     "current_status": "Current Status",
