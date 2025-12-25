@@ -37,6 +37,8 @@
       "asc": "升序",
       "desc": "降序"
     },
+    "page_size": "页面大小",
+    "page_size-tips": "115 Open的单页API条目数",
     "refresh_token": "刷新令牌",
     "root_folder_id": "根文件夹 ID"
   },
@@ -1017,6 +1019,13 @@
     "KeepLocalDownloadFile-tips": "保留本地下载文件",
     "PathPrefix": "路径前缀",
     "PathPrefix-tips": "路径前缀",
+    "SaveLocalMode": "本地保存模式",
+    "SaveLocalMode-tips": "本地保存 strm 文件模式",
+    "SaveLocalModes": {
+      "insert": "插入",
+      "sync": "同步",
+      "update": "更新"
+    },
     "SaveStrmLocalPath": "Strm文件本地路径",
     "SaveStrmLocalPath-tips": "Strm文件本地存储路径",
     "SaveStrmToLocal": "保存Strm文件到本地",
@@ -1030,6 +1039,7 @@
     "paths": "路径",
     "siteUrl": "站点 URL",
     "siteUrl-tips": "Strm 文件的前缀 URL",
+    "withSign": "含签名",
     "withoutUrl": "无URL前缀",
     "withoutUrl-tips": "无URL前缀的Strm 文件"
   },
