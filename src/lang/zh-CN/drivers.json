@@ -219,12 +219,38 @@
     "download_concurrency-tips": "需要启用代理",
     "download_part_size": "下载分片大小",
     "download_part_size-tips": "需要启用代理。单位：KB",
-    "parallel_write": "并行写入",
+    "file_consistency_check": "文件校验",
     "paths": "路径",
-    "protect_same_name": "保护同名",
-    "protect_same_name-tips": "保护同名的文件不被删除或重命名",
     "provider_pass_through": "后端驱动类型穿透",
-    "writable": "可写"
+    "put_conflict_policy": "上传冲突处理策略",
+    "put_conflict_policy-tips": "上传、复制、移动或解压时，驱动程序如何处理相同的后端路径。",
+    "put_conflict_policys": {
+      "all": "覆盖所有冲突路径",
+      "all_strict": "显示全部冲突路径",
+      "deterministic": "显示唯一路径",
+      "deterministic_or_all": "显示唯一路径和全部冲突路径",
+      "disabled": "禁止上传",
+      "first": "上传第一条冲突路径",
+      "quota": "基于剩余空间的加权随机负载均衡",
+      "quota_strict": "基于剩余空间的严格加权随机负载均衡",
+      "random": "随机负载均衡"
+    },
+    "read_conflict_policy": "读取冲突处理策略",
+    "read_conflict_policys": {
+      "all": "基于每个部分的负载均衡",
+      "first": "获取第一个冲突路径对应的文件",
+      "random": "基于每个文件的负载均衡"
+    },
+    "write_conflict_policy": "写入冲突处理策略",
+    "write_conflict_policy-tips": "重命名、删除或创建目录时，驱动程序如何处理相同的后端路径。",
+    "write_conflict_policys": {
+      "all": "覆盖全部冲突路径",
+      "all_strict": "显示全部冲突路径",
+      "deterministic": "显示唯一路径",
+      "deterministic_or_all": "显示唯一路径和全部冲突路径",
+      "disabled": "禁止写入",
+      "first": "写入第一条冲突路径"
+    }
   },
   "Aliyundrive": {
     "internal_upload": "内部上传",

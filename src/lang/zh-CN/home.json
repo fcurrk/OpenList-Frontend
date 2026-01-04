@@ -165,7 +165,12 @@
       "dblclick": "双击",
       "disable_while_checked": "选中时禁用"
     },
-    "editor_font_size": "编缉器字体大小"
+    "editor_font_size": "编缉器字体大小",
+    "show_gallery_thumbnails": "显示预览缩略图",
+    "show_gallery_thumbnails_options": {
+      "none": "隐藏",
+      "visible": "显示"
+    }    
   },
   "package_download": {
     "current_status": "当前状态",
