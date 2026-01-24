@@ -335,6 +335,16 @@
     "share_id": "分享 ID",
     "share_pwd": "分享密码"
   },
+  "AutoIndex": {
+    "ignore_file_names": "忽略文件名",
+    "item_xpath": "XPath入口",
+    "modified_time_format": "修改日期格式",
+    "modified_time_format-tips": "必须基于时间2006年1月2日星期一15:04:05 -0700 MST",
+    "modified_xpath": "修改 XPath 时间",
+    "name_xpath": "XPath 文件名称",
+    "size_xpath": "XPath 文件大小",
+    "url": "URL"
+  },
   "Azure Blob Storage": {
     "access_key": "访问密钥",
     "access_key-tips": "用于身份验证的 Azure 存储的访问密钥。https://learn.microsoft.com/azure/storage/common/storage-account-keys-management",
@@ -783,6 +793,8 @@
   },
   "Mega_nz": {
     "email": "邮箱",
+    "move_to_trash": "回收站",
+    "move_to_trash-tips": "删除文件时将其移至回收站",
     "password": "密码",
     "two_fa_code": "双因素身份验证码",
     "two_fa_code-tips": "双因素身份验证码由 6 位数字组成，仅填写双因素身份验证码将不支持重载驱动程序",
@@ -1437,6 +1449,7 @@
     },
     "AliyundriveOpen": {},
     "AliyundriveShare": {},
+    "AutoIndex": {},
     "Azure Blob Storage": {},
     "BaiduNetdisk": {},
     "BaiduPhoto": {},
@@ -1527,6 +1540,7 @@
     "Aliyundrive": "阿里云盘",
     "AliyundriveOpen": "阿里云盘（Oauth2）",
     "AliyundriveShare": "阿里云盘分享",
+    "AutoIndex": "AutoIndex",
     "Azure Blob Storage": "Azure Blob 存储",
     "BaiduNetdisk": "百度网盘",
     "BaiduPhoto": "一刻相册",

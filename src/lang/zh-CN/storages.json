@@ -1,5 +1,12 @@
 {
   "common": {
+    "export": "导出",
+    "export_title": "导出存储到 JSON",
+    "export_tips": "请复制上面的存储 JSON配置",
+    "import": "导入",
+    "import_title": "从 JSON导入存储配置",
+    "import_success": "导入成功!",
+    "import_tips": "粘贴导出的存储JSON配置来进行导入",
     "mount_path": "挂载路径",
     "mount_path-tips": "要挂载到的路径，它是唯一的，不能重复",
     "driver": "驱动",
