@@ -1109,6 +1109,8 @@
     "chunk_size-tips": "分片大小，单位 MiB",
     "cookie": "Cookie",
     "cookie-tips": "access_token=xxx",
+    "random_chunk_name": "随机块名称",
+    "random_chunk_name-tips": "随机分片块名称",
     "root_folder_path": "根文件夹路径",
     "upload_concurrency": "上传并发数量",
     "upload_concurrency-tips": "上传并发请求",
