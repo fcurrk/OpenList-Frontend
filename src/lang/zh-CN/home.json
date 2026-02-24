@@ -112,6 +112,7 @@
     "no_files_drag": "没有文件被拖入。",
     "upload_files": "选择文件",
     "upload_folder": "选择文件夹",
+    "hashing": "Hashing",
     "pending": "等待中",
     "uploading": "上传中",
     "backending": "正在后台上传",
