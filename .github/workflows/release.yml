@@ -16,9 +16,11 @@ jobs:
           node-version: "24.14.1"
           registry-url: "https://registry.npmjs.org"
 
-      - uses: pnpm/action-setup@v5
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
+        id: pnpm-install
         with:
+          version: 9
           run_install: false
 
       - name: Checkout
