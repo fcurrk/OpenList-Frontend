@@ -144,7 +144,7 @@
   "version": "后端版本",
   "video_autoplay": "自动播放视频",
   "video_types": "视频类型",
-  "webauthn_login_enabled": "启用Webauthn登录", 
+  "webauthn_login_enabled": "启用WebAuthn登录", 
   "logo_text": "文字Logo",
   "site_beian": "备案号",
   "contact_us": "自定义关于页面内容"

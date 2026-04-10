@@ -1,7 +1,13 @@
 {
   "path": "路径",
   "password": "密码",
-  "write": "写入",
+  "read_users": "读取用户信息",，
+  "read_users_help": "只有具备所需权限的选定用户才能读取此目录。",
+  "write_users": "写入用户",
+  "write_users_help": "只有具备所需权限的选定用户才能写入此目录。",
+  "all_permitted_users": "所有获准用户",
+  "write": "强制写入内容",
+  "write_help": "绕过用户权限检查强行写入内容（创建/上传/修改）。请谨慎使用。",
   "hide": "隐藏",
   "readme": "说明",
   "readme_help": "显示在底部,支持Markdown,包括文字与链接",

@@ -81,7 +81,9 @@
     "RefreshToken": "刷新令牌",
     "UploadThread": "上传线程",
     "UploadThread-tips": "上传使用的线程数",
-    "root_folder_id": "根文件夹 ID"
+    "api_url_address": "API链接地址",
+    "root_folder_id": "根文件夹 ID",
+    "use_online_api": "使用在线API"    
   },
   "123Pan": {
     "UploadThread": "上传线程",
@@ -552,6 +554,29 @@
     "root_folder_id": "根文件夹 ID",
     "upload_thread": "上传线程"
   },
+  "DoubaoNew": {
+    "app_id": "App ID",
+    "app_id-tips": "豆包App ID",
+    "auth_client_id": "认证客户端ID",
+    "auth_client_id-tips": "豆包商业认证客户端ID",
+    "auth_client_type": "认证客户端类型",
+    "auth_client_type-tips": "豆包商业认证客户端类型",
+    "auth_scope": "认证范围",
+    "auth_scope-tips": "豆包企业认证范围",
+    "auth_sdk_source": "认证SDK来源",
+    "auth_sdk_source-tips": "豆包商业认证SDK来源",
+    "auth_sdk_version": "认证SDK版本",
+    "auth_sdk_version-tips": "豆包商业认证SDK版本",
+    "cookie": "Cookie",
+    "cookie-tips": "Cookie",
+    "dpop_key_secret": "Dpop密钥",
+    "dpop_key_secret-tips": "用于生成Dpop令牌的Dpop密钥",
+    "ignore_jwt_check": "忽略JWT检查",
+    "ignore_jwt_check-tips": "是否忽略JWT检查以防止时间问题",
+    "root_folder_id": "根文件夹 ID",
+    "share_link": "分享链接",
+    "share_link-tips": "是否使用分享链接进行下载"
+  },
   "DoubaoShare": {
     "cookie": "Cookie",
     "root_folder_path": "根文件夹路径",
@@ -886,6 +911,7 @@
     "forward_archive_requests": "转发压缩文件请求",
     "meta_password": "元信息密码",
     "pass_ip_to_upsteam": "向上游转发IP",
+    "pass_refresh_flag_to_upsteam": "刷新上游数据",
     "pass_ua_to_upsteam": "传递 UA 至上游",
     "password": "密码",
     "root_folder_path": "根文件夹路径",
@@ -1464,6 +1490,9 @@
     "Degoo": {},
     "Doge": {},
     "Doubao": {},
+    "DoubaoNew": {
+      "alert": "如果存储空间是公开可访问的，请不要使用302。\n否则，下载链接可能会泄露敏感信息，如访问令牌或签名。\n其他人可能会使用泄露的链接访问您的所有文件。"
+    },
     "DoubaoShare": {},
     "Dropbox": {},
     "FTP": {},
@@ -1555,6 +1584,7 @@
     "Degoo": "Degoo",
     "Doge": "多吉云",
     "Doubao": "豆包",
+    "DoubaoNew": "豆包New",
     "DoubaoShare": "豆包分享",
     "Dropbox": "Dropbox",
     "FTP": "FTP",
