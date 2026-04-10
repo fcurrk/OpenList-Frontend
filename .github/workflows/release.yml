@@ -32,8 +32,8 @@ jobs:
       - name: Build
         run: |
           mv OpenList-Frontend/release.sh .
-	  chmod +x release.sh
-	  chmod +x build.sh
+          chmod +x release.sh
+          chmod +x build.sh
           bash release.sh
 
       - name: Release
