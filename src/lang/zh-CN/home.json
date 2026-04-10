@@ -24,26 +24,26 @@
     "open_in_new_window": "在新窗口中打开",
     "auto_next": "自动下一页",
     "names": {
-      "download": "直接下载",，
-      "html": "HTML渲染"，
-      "aliyun_video": "阿里云视频播放器",，
-      "markdown": "Markdown 渲染器",，
-      "flash": "Flash播放器"，
-      "markdown_with_word_wrap": "Markdown 渲染（带换行）",，
-      "url_open": "URL 打开",，
-      "text_editor": "文本编辑器",，
-      "image": "图像查看器",，
-      "video": "视频播放器",，
-      "audio": "音频播放器",，
-      "ipa": "IPA安装程序"，
-      "plist": "Plist 安装器",，
-      "heic": "HEIC查看器",，
-      "pdf": "PDF预览器",，
-      "ppt": "PPT预览器",，
-      "xls": "XLS预览器",，
-      "doc": "DOC预览器",，
-      "asciinema": "Asciinema播放器",，
-      "video360": "Video360播放器",，
+      "download": "直接下载",
+      "html": "HTML渲染",
+      "aliyun_video": "阿里云视频播放器",
+      "markdown": "Markdown 渲染器",
+      "flash": "Flash播放器",
+      "markdown_with_word_wrap": "Markdown 渲染（带换行）",
+      "url_open": "URL 打开",
+      "text_editor": "文本编辑器",
+      "image": "图像查看器",
+      "video": "视频播放器",
+      "audio": "音频播放器",
+      "ipa": "IPA安装程序",
+      "plist": "Plist 安装器",
+      "heic": "HEIC查看器",
+      "pdf": "PDF预览器",
+      "ppt": "PPT预览器",
+      "xls": "XLS预览器",
+      "doc": "DOC预览器",
+      "asciinema": "Asciinema播放器",
+      "video360": "Video360播放器",
       "archive": "存档预览器"
     }
   },
