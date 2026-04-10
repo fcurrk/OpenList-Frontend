@@ -3,6 +3,7 @@ mkdir -p compress
 
 # 构建完整版本
 cd OpenList-Frontend
+pnpm install
 pnpm build
 cd ..
 tar -czvf compress/openlist-frontend-dist.tar.gz -C OpenList-Frontend/dist .
