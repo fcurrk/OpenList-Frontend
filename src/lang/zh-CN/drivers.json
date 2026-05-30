@@ -1383,6 +1383,7 @@
   },
   "WPS": {
     "cookie": "Cookie",
+    "custom_ua": "自定义UA",
     "mode": "模式",
     "modes": {
       "Business": "商业版",
