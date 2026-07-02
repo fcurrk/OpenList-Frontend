@@ -23,6 +23,13 @@
     "tr-installing": "TrollStore 正在安装",
     "open_in_new_window": "在新窗口中打开",
     "auto_next": "自动下一页",
+    "fullscreen": "全屏模式",
+    "fullscreen_failed": "切换全屏模式失败",
+    "exit_fullscreen": "退出全屏模式",
+    "fullview": "全景视图",
+    "exit_fullview": "退出全景视图",
+    "auto_fit": "自动适配",
+    "reset_zoom": "重置缩放",
     "names": {
       "download": "直接下载",
       "html": "HTML渲染",
