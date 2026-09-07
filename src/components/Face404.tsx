@@ -96,7 +96,10 @@ const face404Style = `
 }
 `
 
-if (typeof document !== "undefined" && !document.getElementById("face404-style")) {
+if (
+  typeof document !== "undefined" &&
+  !document.getElementById("face404-style")
+) {
   const styleEl = document.createElement("style")
   styleEl.id = "face404-style"
   styleEl.textContent = face404Style

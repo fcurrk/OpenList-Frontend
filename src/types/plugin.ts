@@ -1,10 +1,5 @@
 export type PluginType =
-  | "ui"
-  | "preview"
-  | "tool"
-  | "theme"
-  | "integration"
-  | "system"
+  "ui" | "preview" | "tool" | "theme" | "integration" | "system"
 
 export type PluginPermission =
   | "fs:read"

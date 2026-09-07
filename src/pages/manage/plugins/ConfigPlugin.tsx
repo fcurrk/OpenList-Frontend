@@ -42,9 +42,8 @@ const ConfigPlugin = () => {
   const [enabled, setEnabled] = createSignal(true)
   const [saving, setSaving] = createSignal(false)
 
-  const [fetchLoading, fetchPlugin] = useFetch(
-    (): Promise<Resp<PluginItem>> =>
-      r.get(`/admin/plugin/get?id=${encodeURIComponent(id)}`),
+  const [fetchLoading, fetchPlugin] = useFetch((): Promise<Resp<PluginItem>> =>
+    r.get(`/admin/plugin/get?id=${encodeURIComponent(id)}`),
   )
 
   const initData = async () => {

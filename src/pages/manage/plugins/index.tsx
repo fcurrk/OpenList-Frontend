@@ -53,8 +53,8 @@ const Plugins = () => {
     "table" as "grid" | "table",
   )
 
-  const [loading, fetchPlugins] = useFetch(
-    (): Promise<PageResp<PluginItem>> => r.get("/admin/plugin/list"),
+  const [loading, fetchPlugins] = useFetch((): Promise<PageResp<PluginItem>> =>
+    r.get("/admin/plugin/list"),
   )
 
   const refresh = async () => {

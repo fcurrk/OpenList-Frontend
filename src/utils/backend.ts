@@ -17,7 +17,9 @@ export type BackendKind = "go" | "ts-worker"
 let backend: BackendKind = "go"
 
 /** Called by setSettings() after fetching /public/settings. */
-export const setBackendKind = (kind: BackendKind | string | undefined): void => {
+export const setBackendKind = (
+  kind: BackendKind | string | undefined,
+): void => {
   if (kind === "ts-worker") {
     backend = "ts-worker"
   } else {
