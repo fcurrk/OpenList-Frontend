@@ -66,7 +66,7 @@
   "max_server_upload_speed": "最大服务器上传速度",
   "move_task_threads_num": "调整任务线程数量",
   "multipart_chunk_size": "分块上传块大小(MB)",
-  "multipart_chunk_size-tips": "分块上传的分块大小(以MB为单位，正整数)，请确保其不超过您CDN的请求限制；每个活动会话在服务器磁盘上最多缓存8个分块",，
+  "multipart_chunk_size-tips": "分块上传的分块大小(以MB为单位，正整数)，请确保其不超过您CDN的请求限制；每个活动会话在服务器磁盘上最多缓存8个分块",
   "multipart_enabled": "启用分块上传",
   "non_efs_zip_encoding": "ZIP文件的备用编码格式",
   "ocr_api": "OCR 接口",

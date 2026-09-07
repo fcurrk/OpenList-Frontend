@@ -755,7 +755,7 @@
     "device_id": "设备ID",
     "device_id-tips": "可选自定义设备ID（32个十六进制字符），为空时自动生成",
     "device_sign": "设备签名",
-    "device_sign-tips": "可选自定义X-Device-Sign头（若为空，则根据device_id生成）",
+    "device_sign-tips": "可选自定义X-Device-Sign头(若为空，则根据device_id生成)",
     "order_by": "排序依据",
     "order_by-tips": "文件列表使用的排序字段",
     "page_size": "页面大小",
