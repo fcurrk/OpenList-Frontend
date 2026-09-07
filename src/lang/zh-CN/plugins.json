@@ -1,0 +1,69 @@
+{
+  "title": "插件",
+  "name": "插件名称",
+  "type": "类型",
+  "version": "版本",
+  "author": "作者",
+  "status_col": "状态",
+  "empty_desc": "未提供描述",
+  "subtitle": "通过上传ZIP文件和第三方URL安装来管理和配置OpenList扩展程序",
+  "search_placeholder": "按名称、ID、描述或权限搜索插件...",
+  "filter_type": "按类型筛选",
+  "types": {
+    "all": "所有类型",
+    "ui": "用户界面与小部件",
+    "preview": "预览者",
+    "tool": "工具",
+    "theme": "主题与效果",
+    "integration": "集成",
+    "system": "系统核心"
+  },
+  "status": {
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "builtin": "内置",
+    "custom": "自定义",
+    "high_privilege": "高级权限"
+  },
+  "actions": {
+    "install": "安装插件",
+    "reinstall": "重新安装",
+    "uninstall": "卸载",
+    "config": "设置",
+    "view_details": "详情",
+    "enable": "启用",
+    "disable": "禁用",
+    "export": "导出配置",
+    "import": "导入配置",
+    "refresh": "刷新",
+    "save": "保存设置",
+    "cancel": "取消",
+    "install_url": "通过URL安装"
+  },
+  "install_modal": {
+    "install_type": "安装源",
+    "zip_tab": "上传ZIP包",
+    "url_tab": "通过URL安装",
+    "zip_file_label": "插件ZIP包",
+    "zip_drop_title": "点击选择或拖放插件ZIP文件至此",
+    "zip_drop_help": "支持包含 plugin.json / manifest.json 的开源插件存档文件",
+    "url_label": "插件URL清单",
+    "url_placeholder": "例如: https://raw.githubusercontent.com/.../plugin.json",
+    "url_help": "支持开源插件JSON清单链接(GitHub Raw、jsDelivr、unpkg等)",
+    "high_privilege_label": "授予系统高权限(根权限/管理员权限)",
+    "high_privilege_help": "允许直接访问低级文件系统API、重新加载存储驱动程序、完全读写站点设置以及处理原始HTTP请求",
+    "fetch_and_install": "获取并安装"
+  },
+  "config_modal": {
+    "title": "插件配置",
+    "no_config": "此插件无需配置参数",
+    "save_success": "插件配置保存成功"
+  },
+  "delete_confirm": "您确定要卸载并删除此插件吗？此操作无法撤销",
+  "import_modal": {
+    "title": "导入插件备份",
+    "paste_json": "在此处粘贴插件JSON数据",
+    "import_success": "插件导入成功"
+  },
+  "empty_installed": "没有安装任何插件。点击'安装插件'以上传ZIP包或从URL安装."
+}

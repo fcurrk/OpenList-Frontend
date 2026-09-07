@@ -1,0 +1,13 @@
+{
+  "setup_to": "设置",
+  "title": "初始化OpenList",
+  "username-tips": "管理员用户名",
+  "password-tips": "设置管理员密码",
+  "confirm_password-tips": "确认密码",
+  "site_title-tips": "网站标题",
+  "setup": "初始化",
+  "success": "初始化成功，请登录",
+  "failed": "初始化失败",
+  "password_mismatch": "密码不匹配",
+  "password_too_short": "密码必须在4位以上"
+}

@@ -32,8 +32,10 @@
   "thunder_browser": "迅雷浏览器",
   "thunder_browser_temp_dir": "迅雷浏览器临时目录",
   "set_thunder_browser": "设置迅雷浏览器",
-  "thunderx": "Thunder",
+  "thunderx": "ThunderX",
   "thunderX_temp_dir": "迅雷 X 临时目录",
   "set_thunderX": "设置迅雷 X",
-  "token": "令牌"
+  "token": "令牌",
+  "guangyapan": "光鸭云盘",
+  "guangyapan_temp_dir": "光鸭云盘临时目录"
 }
