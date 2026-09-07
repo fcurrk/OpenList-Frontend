@@ -1624,7 +1624,7 @@
     "GitHub Releases": {},
     "GoogleDrive": {},
     "GooglePhoto": {},
-    "GuangYaPan"：{
+    "GuangYaPan": {
       "alert": "两步短信登录：(1) 填写phone_number(如有需要还要填写captcha_token)，设置send_code=true并保存；(2) 填写verify_code并保存，完成登录并自动保存access_token/refresh_token。"
     },
     "HalalCloud": {},
