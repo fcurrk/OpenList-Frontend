@@ -745,7 +745,7 @@
     "root_folder_id": "根文件夹 ID",
     "show_archive": "显示归档"
   },
-  "GuangYaPan"：{
+  "GuangYaPan": {
     "access_token": "访问令牌",
     "access_token-tips": "持有者访问令牌（如果提供了refresh_token，则可选）",
     "captcha_token": "验证码令牌",
