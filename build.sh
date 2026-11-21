@@ -24,12 +24,8 @@ main() {
     parse_args "$@"
     set_defaults
     check_git_version_and_commit
-    update_package_version
-    if [[ "$LITE_FLAG" == "true" ]]; then
-        archive_name="openlist-frontend-dist-lite-${version_tag}"
-    else
-        archive_name="openlist-frontend-dist-${version_tag}"
-    fi
+    set_build_version
+    archive_name="openlist-frontend-dist-${version_tag}"
     build_project
     create_version_file
     handle_compression
@@ -46,7 +42,6 @@ parse_args() {
             --no-compress) COMPRESS_FLAG="false"; shift ;;
             --enforce-tag) ENFORCE_TAG="true"; shift ;;
             --skip-i18n) SKIP_I18N="true"; shift ;;
-            --lite) LITE_FLAG="true"; shift ;;
             -h|--help) display_help; exit 0 ;;
             *) log_error "Unknown option: $1"; display_help; exit 1 ;;
         esac
@@ -55,7 +50,7 @@ parse_args() {
 
 # Display help message
 display_help() {
-    echo "Usage: $0 [--dev|--release] [--compress|--no-compress] [--enforce-tag] [--skip-i18n] [--lite]"
+    echo "Usage: $0 [--dev|--release] [--compress|--no-compress] [--enforce-tag] [--skip-i18n]"
     echo ""
     echo "Options (will overwrite environment setting):"
     echo "  --dev         Build development version"
@@ -64,7 +59,6 @@ display_help() {
     echo "  --no-compress Skip compression"
     echo "  --enforce-tag Force git tag requirement for both dev and release builds"
     echo "  --skip-i18n   Skip i18n build step"
-    echo "  --lite        Build lite version"
     echo ""
     echo "Environment variables:"
     echo "  OPENLIST_FRONTEND_BUILD_MODE=dev|release (default: dev)"
@@ -79,7 +73,6 @@ set_defaults() {
     COMPRESS_FLAG=${COMPRESS_FLAG:-${OPENLIST_FRONTEND_BUILD_COMPRESS:-false}}
     ENFORCE_TAG=${ENFORCE_TAG:-${OPENLIST_FRONTEND_BUILD_ENFORCE_TAG:-false}}
     SKIP_I18N=${SKIP_I18N:-${OPENLIST_FRONTEND_BUILD_SKIP_I18N:-false}}
-    LITE_FLAG=${LITE_FLAG:-false}
 }
 
 # Check git version and commit
@@ -104,7 +97,7 @@ enforce_git_tag() {
 
 # Validate git tag against package.json version
 validate_git_tag() {
-    package_version=$(grep '"version":' package.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+    package_version=$(node -p 'require("./package.json").version')
     git_version_clean=${git_version#v}
     if [[ "$git_version_clean" != "$package_version" ]]; then
         log_error "Package.json version (${package_version}) does not match git tag (${git_version_clean})."
@@ -114,22 +107,23 @@ validate_git_tag() {
 
 # Fallback to default git tag for development builds
 fallback_git_tag() {
-    git tag -d edge >/dev/null 2>&1 || true
-    git_version=$(git describe --abbrev=0 --tags 2>/dev/null || echo "v0.0.0")
+    if ! git_version=$(git describe --abbrev=0 --tags --match 'v[0-9]*.[0-9]*.[0-9]*' 2>/dev/null); then
+        git_version_clean=$(node -p 'require("./package.json").version')
+        return
+    fi
+
     git_version_clean=${git_version#v}
-    git_version_clean=${git_version_clean%%-*}
+    if [[ "$git_version_clean" =~ ^([0-9]+\.[0-9]+\.[0-9]+)([-+][0-9A-Za-z.-]+)?$ ]]; then
+        git_version_clean=${BASH_REMATCH[1]}
+    else
+        git_version_clean=$(node -p 'require("./package.json").version')
+    fi
 }
 
-# Update package.json version
-update_package_version() {
+# Set the version for the build
+set_build_version() {
     if [[ "$BUILD_TYPE" == "dev" ]]; then
-        # Handle both BSD and GNU sed syntax
-        if [[ "$OSTYPE" == "darwin"* ]]; then
-            sed -i "" "s/\"version\": *\"[^\"]*\"/\"version\": \"${git_version_clean}\"/" package.json
-        else
-            sed -i "s/\"version\": *\"[^\"]*\"/\"version\": \"${git_version_clean}\"/" package.json
-        fi
-        log_success "Package.json version updated to ${git_version_clean}"
+        log_info "Using ${git_version_clean} as the development build version"
         version_tag="v${git_version_clean}-${commit}"
         log_build "Building DEV version ${version_tag}..."
     elif [[ "$BUILD_TYPE" == "release" ]]; then
@@ -161,11 +155,7 @@ build_project() {
     node ./scripts/i18n.mjs
 
     log_step "==== Building project ===="
-    if [[ "$LITE_FLAG" == "true" ]]; then
-        pnpm build:lite
-    else
-        pnpm build
-    fi
+    pnpm build
 }
 
 # Fetch i18n files from release if skip-i18n flag is set
