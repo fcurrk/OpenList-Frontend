@@ -24,7 +24,7 @@
   "115 Open": {
     "access_token": "访问令牌",
     "limit_rate": "限制速率",
-    "limit_rate-tips": "限制所有 API 请求速率（[limit]r/1s）",
+    "limit_rate-tips": "限制所有 API 请求率（[limit]r/1s）",
     "order_by": "排序",
     "order_bys": {
       "file_name": "文件名称",
@@ -37,8 +37,8 @@
       "asc": "升序",
       "desc": "降序"
     },
-    "page_size": "页面大小",
-    "page_size-tips": "115 Open的单页API条目数",
+    "page_size": "分页大小",
+    "page_size-tips": "调用 115open GetFiles API 时传递的 limit 值",
     "refresh_token": "刷新令牌",
     "root_folder_id": "根文件夹 ID"
   },
@@ -75,13 +75,13 @@
     "DirectLink": "使用直链",
     "DirectLink-tips": "下载文件时使用直链",
     "DirectLinkPrivateKey": "直链鉴权密钥",
-    "DirectLinkPrivateKey-tips": "直链鉴权密钥，如果启用了 URL 鉴权",
+    "DirectLinkPrivateKey-tips": "直链鉴权密钥（如果启用了 URL 鉴权）",
     "DirectLinkValidDuration": "直链鉴权有效期",
-    "DirectLinkValidDuration-tips": "分钟，如果启用了 URL 鉴权",
+    "DirectLinkValidDuration-tips": "分钟（如果启用了 URL 鉴权）",
     "RefreshToken": "刷新令牌",
     "UploadThread": "上传线程",
     "UploadThread-tips": "上传使用的线程数",
-    "api_url_address": "API链接地址",
+    "api_url_address": "API地址",
     "root_folder_id": "根文件夹 ID",
     "use_online_api": "使用在线API"    
   },
@@ -109,22 +109,28 @@
     "sharepassword": "分享密码"
   },
   "139Yun": {
-    "authorization": "Authorization",
-    "authorization-tips": "Authorization可以单独使用。如果为空，则仅使用mail_cookies进行快速登录，或者使用mail_cookies + 用户名 + 密码作为完整登录的备用方案",
+    "authorization": "授权",
+    "authorization-tips": "授权可以单独使用。为空则仅凭邮箱 Cookie 快速登录，或凭邮箱 Cookie+用户名+密码作为完整登录回退。",
+    "client_type": "客户端类型",
+    "client_type-tips": "向个人云 API 报告的客户端类型。web（9）允许上传最大 50 GB 的文件；pc（13）将单个文件的上传限制提高到 500 GB。",
+    "client_types": {
+      "pc": "电脑",
+      "web": "网页"
+    },
     "cloud_id": "Cloud ID",
     "custom_upload_part_size": "自定义上传分片大小",
     "custom_upload_part_size-tips": "0 为自动设置",
-    "link_id": "Link id",
-    "link_id-tips": "多个共享资源之间用逗号或换行符分隔。对于受密码保护的共享资源，请使用link_id#password.",
-    "mail_cookies": "邮箱Cookies",
-    "mail_cookies-tips": "来自mail.139.com的Cookie，用于登录认证。",
+    "link_id": "分享链接ID",
+    "link_id-tips": "多个分享用逗号或新行分隔。对受密码保护的分享使用 link_id#password。",
+    "mail_cookies": "邮箱 Cookie",
+    "mail_cookies-tips": "mail.139.com 的 Cookie（用于登录认证）。",
     "password": "密码",
-    "password-tips": "仅当使用mail_cookies+密码登录时才需要",
-    "report_real_size": "报告文件实际大小",
+    "password-tips": "仅在配合邮箱 Cookie 使用密码登录回退时需要。",
+    "report_real_size": "报告真实大小",
     "report_real_size-tips": "启用在上传时报告真实文件大小",
     "root_folder_id": "根文件夹 ID",
     "sms_code": "短信验证码",
-    "sms_code-tips": "仅在OpenList报告已发送139邮件短信验证码后填写此项，然后再次保存存储",
+    "sms_code-tips": "待 OpenList 提示 139 邮箱验证码已发送后，再填写此项，并重新保存配置。",
     "type": "类型",
     "types": {
       "family": "家庭云",
@@ -134,13 +140,13 @@
       "share": "分享"
     },
     "use_large_thumbnail": "使用大缩略图",
-    "use_large_thumbnail-tips": "启用图片大缩略图",
-    "use_old_stream_upload": "使用旧流上传",
-    "use_old_stream_upload-tips": "启用旧版流式上传方法(不支持快速上传)",
+    "use_large_thumbnail-tips": "启用图片使用大缩略图",
+    "use_old_stream_upload": "使用旧的流式上传",
+    "use_old_stream_upload-tips": "启用以使用旧的流式上传方法（不支持快传）",
     "user_domain_id": "用户域 ID",
     "user_domain_id-tips": "Cookie中的ud_id项，需要查看空间使用情况则填写",
     "username": "用户名",
-    "username-tips": "仅当使用mail_cookies+密码登录时才需要"
+    "username-tips": "仅在配合邮箱 Cookie 使用密码登录回退时需要。"
   },
   "189Cloud": {
     "cookie": "Cookie",
@@ -151,10 +157,16 @@
   },
   "189CloudPC": {
     "access_token": "访问令牌",
+    "client_sn": "客户端序列号",
+    "client_sn-tips": "从官方客户端获取的设备序列号；如果没有，请留空",
+    "device_id": "设备 id",
+    "device_id-tips": "第二次设备验证后签发的 DEVICEID Cookie，请保留它以避免再次验证",
     "family_id": "家庭 ID",
     "family_transfer": "家庭传输",
     "generate_torrent": "生成种子文件",
-    "generate_torrent-tips": "上传后生成带有CAS扩展名的种子文件",
+    "generate_torrent-tips": "上传后生成带有 CAS 的 Torrent 文件",
+    "jg_open_id": "Jg 开放 id",
+    "jg_open_id-tips": "官方客户端报告的可选推送 id",
     "login_type": "登录类型",
     "login_types": {
       "password": "密码",
@@ -173,10 +185,13 @@
       "desc": "降序"
     },
     "password": "密码",
+    "password-tips": "提供访问令牌或刷新令牌时无需填写",
     "rapid_upload": "秒传",
     "refresh_token": "刷新令牌",
     "refresh_token-tips": "要切换帐户，请清除此字段",
     "root_folder_id": "根文件夹 ID",
+    "sms_code": "短信验证码",
+    "sms_code-tips": "用于第二次设备验证的短信验证码；登录要求输入时填写并再次保存",
     "type": "类型",
     "types": {
       "family": "家庭云",
@@ -190,7 +205,10 @@
     },
     "upload_thread": "上传线程",
     "upload_thread-tips": "1 ≤ 线程 ≤ 32",
+    "user_finger": "用户指纹",
+    "user_finger-tips": "随登录请求发送的设备指纹；留空时会自动生成并保存",
     "username": "用户名",
+    "username-tips": "提供访问令牌或刷新令牌时无需填写",
     "validate_code": "验证码"
   },
   "189CloudTV": {
@@ -218,8 +236,8 @@
     "upload_thread-tips": "1 ≤ 线程 ≤ 32"
   },
   "AList V3": {
-    "forward_archive_requests": "转发存档请求",
-    "meta_password": "元密码",
+    "forward_archive_requests": "转发压缩文件请求",
+    "meta_password": "元信息密码",
     "pass_ip_to_upsteam": "上传IP给上游",
     "pass_ua_to_upsteam": "上传UA给上游",
     "password": "密码",
@@ -242,34 +260,34 @@
     "file_consistency_check": "文件校验",
     "paths": "路径",
     "provider_pass_through": "后端驱动类型穿透",
-    "put_conflict_policy": "上传冲突处理策略",
-    "put_conflict_policy-tips": "上传、复制、移动或解压时，驱动程序如何处理相同的后端路径。",
+    "put_conflict_policy": "上传冲突策略",
+    "put_conflict_policy-tips": "影响驱动上传到、复制到、移动到、解压到冲突路径的方式。",
     "put_conflict_policys": {
-      "all": "覆盖所有冲突路径",
-      "all_strict": "显示全部冲突路径",
-      "deterministic": "显示唯一路径",
-      "deterministic_or_all": "显示唯一路径和全部冲突路径",
-      "disabled": "禁止上传",
-      "first": "上传第一条冲突路径",
-      "quota": "基于剩余空间的加权随机负载均衡",
-      "quota_strict": "基于剩余空间的严格加权随机负载均衡",
+      "all": "上传到所有有效路径",
+      "all_strict": "仅允许全冲突路径",
+      "deterministic": "仅允许不冲突路径",
+      "deterministic_or_all": "允许不冲突路径和全冲突路径",
+      "disabled": "禁用",
+      "first": "上传到首个有效路径",
+      "quota": "按容量加权随机负载均衡",
+      "quota_strict": "严格按容量加权随机负载均衡",
       "random": "随机负载均衡"
     },
-    "read_conflict_policy": "读取冲突处理策略",
+    "read_conflict_policy": "读取冲突策略",
     "read_conflict_policys": {
-      "all": "基于每个部分的负载均衡",
-      "first": "获取第一个冲突路径对应的文件",
-      "random": "基于每个文件的负载均衡"
+      "all": "按分片负载均衡",
+      "first": "读取首个有效路径",
+      "random": "按文件负载均衡"
     },
-    "write_conflict_policy": "写入冲突处理策略",
-    "write_conflict_policy-tips": "重命名、删除或创建目录时，驱动程序如何处理相同的后端路径。",
+    "write_conflict_policy": "写入冲突策略",
+    "write_conflict_policy-tips": "影响驱动重命名、删除同名文件或文件夹，在同名文件夹下创建文件夹的方式。",
     "write_conflict_policys": {
-      "all": "覆盖全部冲突路径",
-      "all_strict": "显示全部冲突路径",
-      "deterministic": "显示唯一路径",
-      "deterministic_or_all": "显示唯一路径和全部冲突路径",
-      "disabled": "禁止写入",
-      "first": "写入第一条冲突路径"
+      "all": "写入所有有效路径",
+      "all_strict": "仅允许全冲突路径",
+      "deterministic": "仅允许不冲突路径",
+      "deterministic_or_all": "允许不冲突路径和全冲突路径",
+      "disabled": "禁用",
+      "first": "写入首个有效路径"
     }
   },
   "Aliyundrive": {
@@ -297,6 +315,8 @@
       "default": "默认"
     },
     "api_url_address": "API 地址",
+    "callback_concurrency": "回调同义词",
+    "callback_concurrency-tips": "Aliyun用户共享的最大有效下载",
     "client_id": "客户端 ID",
     "client_id-tips": "如果你没有，请留空",
     "client_secret": "客户端密钥",
@@ -357,12 +377,12 @@
   },
   "AutoIndex": {
     "ignore_file_names": "忽略文件名",
-    "item_xpath": "XPath入口",
+    "item_xpath": "条目 XPath",
     "modified_time_format": "修改日期格式",
-    "modified_time_format-tips": "必须基于时间2006年1月2日星期一15:04:05 -0700 MST",
-    "modified_xpath": "修改 XPath 时间",
-    "name_xpath": "XPath 文件名称",
-    "size_xpath": "XPath 文件大小",
+    "modified_time_format-tips": "必须为时间点Mon Jan 2 15:04:05 -0700 MST 2006的某种表示形式",
+    "modified_xpath": "修改时间 XPath",
+    "name_xpath": "文件名 XPath",
+    "size_xpath": "文件大小 XPath",
     "url": "URL"
   },
   "Azure Blob Storage": {
@@ -433,14 +453,14 @@
     "cdn_token_key": "CDN令牌密钥",
     "cdn_token_method": "CDN令牌模式",
     "cdn_token_methods": {
-      "hmac_sha256": "Hmac sha256",
-      "sha256": "Sha256"
+      "hmac_sha256": "HMAC SHA256",
+      "sha256": "SHA256"
     },
     "endpoint": "端点",
-    "placeholder": "占位符",
+    "placeholder": "占位文件名",
     "root_folder_path": "根文件夹路径",
-    "sign_url_expire": "签名URL已过期",
-    "storage_zone_name": "存储区名称"
+    "sign_url_expire": "签名链接有效期",
+    "storage_zone_name": "存储区域名称"
   },
   "CNB Releases": {
     "default_branch": "默认分支",
@@ -459,12 +479,12 @@
     "user_name": "用户名"
   },
   "Chunk": {
-    "chunk_large_file_only": "仅分块大文件",
+    "chunk_large_file_only": "仅对大文件分块",
     "chunk_large_file_only-tips": "当文件大小小于分片大小时以原始形式上传文件",
     "chunk_prefix": "分块前缀",
     "chunk_prefix-tips": "分块文件夹的前缀",
     "custom_ext": "自定义扩展名",
-    "num_list_workers": "列表 Workers 数量",
+    "num_list_workers": "列举分块文件夹线程数",
     "part_size": "分块大小",
     "part_size-tips": "单位：字节",
     "remote_path": "远程存储路径",
@@ -540,6 +560,30 @@
     "thumbnail": "缩略图",
     "thumbnail-tips": "启用在缩略图文件夹下预先生成的缩略图"
   },
+  "CtFile": {
+    "base_url": "基础 URL",
+    "base_url-tips": "API 基础地址，默认 https://rest.ctfile.com/v1",
+    "cloud_type": "网盘类型",
+    "cloud_types": {
+      "private": "私有",
+      "public": "公开"
+    },
+    "order_by": "排序依据",
+    "order_bys": {
+      "name": "名称",
+      "size": "大小",
+      "time": "时间"
+    },
+    "order_direction": "排序方式",
+    "order_directions": {
+      "asc": "升序",
+      "desc": "降序"
+    },
+    "root_folder_id": "根文件夹 ID",
+    "session": "会话",
+    "session-tips": "城通网盘控制台 → 开放接口登录密钥管理 中的 OpenAPI 会话令牌",
+    "user_agent": "用户代理"
+  },
   "Degoo": {
     "access_token": "访问令牌",
     "access_token-tips": "Degoo API 访问令牌，自动获取",
@@ -559,7 +603,7 @@
     "custom_host": "自定义主机",
     "direct_upload_host": "直传主机",
     "enable_custom_host_presign": "启用自定义主机签名",
-    "enable_direct_upload": "允许直传",
+    "enable_direct_upload": "启用前端直传",
     "endpoint": "端点",
     "force_path_style": "强制路径样式",
     "list_object_version": "列出对象版本",
@@ -576,7 +620,7 @@
     "session_token": "会话令牌",
     "sign_url_expire": "签名链接有效期",
     "user_agent": "用户代理",
-    "user_agent-tips": "S3请求的自定义用户代理."
+    "user_agent-tips": "自定义S3请求的用户代理。"
   },
   "Doubao": {
     "cookie": "Cookie",
@@ -586,29 +630,29 @@
       "get_file_url": "获取文件链接"
     },
     "limit_rate": "限速",
-    "limit_rate-tips": "限制所有API请求速率([速率]r/1s)",
+    "limit_rate-tips": "限制所有API请求速率([limit]r/1s)",
     "root_folder_id": "根文件夹 ID",
     "upload_thread": "上传线程"
   },
   "DoubaoNew": {
     "app_id": "App ID",
-    "app_id-tips": "豆包App ID",
-    "auth_client_id": "认证客户端ID",
-    "auth_client_id-tips": "豆包商业认证客户端ID",
+    "app_id-tips": "豆包 App ID",
+    "auth_client_id": "认证客户端 ID",
+    "auth_client_id-tips": "豆包 Biz 认证客户端 ID",
     "auth_client_type": "认证客户端类型",
-    "auth_client_type-tips": "豆包商业认证客户端类型",
-    "auth_scope": "认证范围",
-    "auth_scope-tips": "豆包企业认证范围",
-    "auth_sdk_source": "认证SDK来源",
-    "auth_sdk_source-tips": "豆包商业认证SDK来源",
-    "auth_sdk_version": "认证SDK版本",
-    "auth_sdk_version-tips": "豆包商业认证SDK版本",
+    "auth_client_type-tips": "豆包 Biz 认证客户端类型",
+    "auth_scope": "认证区域",
+    "auth_scope-tips": "豆包 Biz 认证区域",
+    "auth_sdk_source": "认证 SDK 来源",
+    "auth_sdk_source-tips": "豆包 Biz 认证 SDK 来源",
+    "auth_sdk_version": "认证 SDK 版本",
+    "auth_sdk_version-tips": "豆包 Biz 认证 SDK 版本",
     "cookie": "Cookie",
-    "cookie-tips": "Cookie",
-    "dpop_key_secret": "Dpop密钥",
-    "dpop_key_secret-tips": "用于生成Dpop令牌的Dpop密钥",
-    "ignore_jwt_check": "忽略JWT检查",
-    "ignore_jwt_check-tips": "是否忽略JWT检查以防止时间问题",
+    "cookie-tips": "网页 Cookie",
+    "dpop_key_secret": "DPoP 密钥",
+    "dpop_key_secret-tips": "用于生成 DPoP 令牌的 DPoP 密钥",
+    "ignore_jwt_check": "忽略 JWT 检查",
+    "ignore_jwt_check-tips": "是否忽略 JWT 检查以防止时间问题",
     "root_folder_id": "根文件夹 ID",
     "share_link": "分享链接",
     "share_link-tips": "是否使用分享链接进行下载"
@@ -679,7 +723,7 @@
   },
   "GitHub API": {
     "accurate_modified_time": "精确修改时间",
-    "accurate_modified_time-tips": "为小目录列表提供尽可能准确的修改时间。默认禁用。添加一个GitHub GraphQL请求，并在失败时回退到传统零时间值",
+    "accurate_modified_time-tips": "尽量准确的小目录列表修改时间（默认禁用）。会多一次 GitHub GraphQL 请求，失败时回退到旧版零时间值。",
     "author_email": "作者电子邮件",
     "author_name": "作者名称",
     "committer_email": "提交者电子邮件",
@@ -704,12 +748,12 @@
   "GitHub Releases": {
     "gh_proxy": "GitHub 代理",
     "gh_proxy-tips": "GitHub 代理，如：https://ghproxy.net/github.com 或 https://gh-proxy.com/github.com ",
-    "max_page": "最大页数",
+    "max_page": "最大分页数",
     "max_page-tips": "可获取的最大页面数(0表示无限制)，仅在显示所有版本时有效",
-    "per_page": "单页数",
+    "per_page": "每页结果数",
     "per_page-tips": "每页发布数(最多100个)，仅在显示所有版本时有效",
     "repo_structure": "仓库结构",
-    "repo_structure-tips": "结构：[路径：]org/repo",
+    "repo_structure-tips": "结构：[path：]org/repo",
     "root_folder_path": "根文件夹路径",
     "show_all_version": "显示所有版本",
     "show_all_version-tips": "显示所有版本",
@@ -747,28 +791,28 @@
   },
   "GuangYaPan": {
     "access_token": "访问令牌",
-    "access_token-tips": "持有者访问令牌（如果提供了refresh_token，则可选）",
-    "captcha_token": "验证码令牌",
-    "captcha_token-tips": "/v1/auth/verification需要验证码token",
+    "access_token-tips": "Bearer 访问令牌（如果提供刷新令牌则可以不填写）",
+    "captcha_token": "验证码",
+    "captcha_token-tips": "通过 /v1/auth/verification 所需的验证令牌",
     "client_id": "客户端ID",
     "client_id-tips": "光鸭云盘API的客户端ID，必须提供",
     "device_id": "设备ID",
     "device_id-tips": "可选自定义设备ID（32个十六进制字符），为空时自动生成",
-    "device_sign": "设备签名",
+    "device_sign": "设备 ID",
     "device_sign-tips": "可选自定义X-Device-Sign头(若为空，则根据device_id生成)",
     "order_by": "排序依据",
-    "order_by-tips": "文件列表使用的排序字段",
-    "page_size": "页面大小",
+    "order_by-tips": "按文件列表排序字段",
+    "page_size": "分页大小",
     "phone_number": "电话号码",
     "phone_number-tips": "用于短信登录的电话号码，例如+86 13800000000",
     "refresh_token": "刷新令牌",
     "refresh_token-tips": "用于自动登录/自动刷新的刷新令牌",
-    "root_path": "根路径",
-    "root_path-tips": "光鸭云盘中的完整路径",
+    "root_path": "根文件夹路径",
+    "root_path-tips": "光鸭云盘的完整路径",
     "send_code": "发送验证码",
     "send_code-tips": "设置为true并保存以发送短信验证码，发送后会自动重置为false",
     "sort_type": "排序类型",
-    "sort_type-tips": "文件列表使用的排序方向",
+    "sort_type-tips": "按文件列表排序字段",
     "verification_id": "验证ID",
     "verification_id-tips": "发送短信验证码后自动生成；请勿手动编辑",
     "verify_code": "验证码",
@@ -785,8 +829,8 @@
     "upload_thread-tips": "1 ≤ 线程 ≤ 32"
   },
   "HalalCloudOpen": {
-    "client_id": "客户端 ID",
-    "client_secret": "客户端证书",
+    "client_id": "客户端ID",
+    "client_secret": "客户端密钥",
     "host": "主机",
     "refresh_token": "刷新令牌",
     "refresh_token-tips": "如果使用个人API则不需要刷新令牌",
@@ -854,6 +898,8 @@
     "directory_size": "目录大小",
     "directory_size-tips": "这可能会影响主机的性能",
     "mkdir_perm": "创建文件夹权限",
+    "pdf_thumbnail": "PDF 预览图",
+    "pdf_thumbnail-tips": "在 macOS 上使用 Quick Look 生成 PDF 第一页缩略图",
     "recycle_bin_path": "回收站路径",
     "recycle_bin_path-tips": "回收站的路径，如果空或保留“永久删除”则永久删除",
     "root_folder_path": "根文件夹路径",
@@ -870,7 +916,7 @@
   "MediaFire": {
     "chunk_size": "分片大小",
     "cookie": "Cookie",
-    "cookie-tips": "MediaFire API认证需要使用",
+    "cookie-tips": "必填，MediaFire API认证需要使用",
     "limit_rate": "限制速率",
     "limit_rate-tips": "限制所有 API 请求速率（[limit]r/1s）",
     "order_by": "排序",
@@ -886,7 +932,7 @@
     },
     "root_folder_path": "根文件夹路径",
     "session_token": "会话令牌",
-    "session_token-tips": "MediaFire API可选，可从cookie中自动获取",
+    "session_token-tips": "选填，可从cookie中自动获取",
     "upload_threads": "上传线程",
     "upload_threads-tips": "上传并发请求"
   },
@@ -904,8 +950,8 @@
   },
   "Mega_nz": {
     "email": "邮箱",
-    "move_to_trash": "回收站",
-    "move_to_trash-tips": "删除文件时将其移至回收站",
+    "move_to_trash": "移至回收站",
+    "move_to_trash-tips": "删除文件时移至回收站",
     "password": "密码",
     "two_fa_code": "双因素身份验证码",
     "two_fa_code-tips": "双因素身份验证码由 6 位数字组成，仅填写双因素身份验证码将不支持重载驱动程序",
@@ -969,7 +1015,7 @@
     "use_online_api": "使用在线 API"
   },
   "Onedrive Sharelink": {
-    "disable_disk_usage": "禁用磁盘占用",
+    "disable_disk_usage": "禁用剩余空间显示",
     "enable_direct_upload": "启用直接上传",
     "enable_direct_upload-tips": "允许直接上传至OneDrive，无需经过OpenList",
     "password": "密码",
@@ -981,11 +1027,13 @@
     "client_id": "客户端 ID",
     "client_secret": "客户端密钥",
     "custom_host": "自定义主机",
-    "custom_host-tips": "自定义加速下载链接",
+    "custom_host-tips": "自定义OneDrive下载链接主机",
     "disable_disk_usage": "禁用剩余空间显示",
     "email": "邮箱",
     "enable_direct_upload": "允许直传",
     "enable_direct_upload-tips": "启用从客户端直接上传到OneDrive",
+    "is_sharepoint": "挂载sharepoint",
+    "is_sharepoint-tips": "挂载 SharePoint 网站的默认文档库，而非用户的 OneDrive",
     "region": "地区",
     "regions": {
       "cn": "世纪互联",
@@ -994,6 +1042,8 @@
       "us": "美国版"
     },
     "root_folder_path": "根文件夹路径",
+    "site_id": "站点 id",
+    "site_id-tips": "以下格式之一：`<host>`、`<siteGuid>` 或 `<webGuid>`；`<host>:/sites/<name>`；或者完整的站点 URL。请将其指向拥有该库的站点——若仅指定 `<host>`，则会解析至根站点（即空路径站点）下的库。",
     "tenant_id": "租户 ID"
   },
   "OpenList": {
@@ -1028,6 +1078,8 @@
     },
     "refresh_token": "刷新令牌",
     "root_folder_id": "根文件夹 ID",
+    "skip_verification": "跳过验证",
+    "skip_verification-tips": "忽略验证码返回的人类验证 URL 而不是失败；启用此选项可能触发PikPak 风控",
     "username": "用户名"
   },
   "PikPakShare": {
@@ -1048,8 +1100,8 @@
     "email": "邮箱",
     "password": "密码",
     "root_folder_id": "根文件夹 ID",
-    "two_fa_code": "二步验证",
-    "use_reusable_login": "使用登录凭据登录",
+    "two_fa_code": "2FA验证码",
+    "use_reusable_login": "使用可重用登录",
     "use_reusable_login-tips": "使用可重用的登录凭据代替用户名/密码登录"
   },
   "Quark": {
@@ -1175,16 +1227,16 @@
     "PathPrefix": "路径前缀",
     "PathPrefix-tips": "路径前缀",
     "SaveLocalMode": "本地保存模式",
-    "SaveLocalMode-tips": "本地保存 strm 文件模式",
+    "SaveLocalMode-tips": "保存Strm到本地目录的方式",
     "SaveLocalModes": {
-      "insert": "插入",
+      "insert": "新增",
       "sync": "同步",
       "update": "更新"
     },
-    "SaveStrmLocalPath": "Strm文件本地路径",
-    "SaveStrmLocalPath-tips": "Strm文件本地存储路径",
-    "SaveStrmToLocal": "保存Strm文件到本地",
-    "SaveStrmToLocal-tips": "保存Strm文件到本地",
+    "SaveStrmLocalPath": "保存Strm本地路径",
+    "SaveStrmLocalPath-tips": "保存Strm文件本地路径",
+    "SaveStrmToLocal": "保存Strm到本地",
+    "SaveStrmToLocal-tips": "本地保存Strm文件",
     "downloadFileTypes": "下载文件类型",
     "downloadFileTypes-tips": "需要使用 Strm 流下载的文件（通常是字幕）",
     "encodePath": "编码路径",
@@ -1362,6 +1414,8 @@
       "algorithms": "算法",
       "captcha_sign": "验证码签名"
     },
+    "space": "空间",
+    "space-tips": "远程设备的设备ID",
     "timestamp": "时间戳",
     "timestamp-tips": "签名类型是验证码签名，此为必填项",
     "use_video_url": "使用视频 URL",
@@ -1477,7 +1531,7 @@
   "WPS": {
     "cookie": "Cookie",
     "custom_ua": "自定义UA",
-    "mode": "模式",
+    "mode": "类型",
     "modes": {
       "Business": "商业版",
       "Personal": "个人版"
@@ -1515,9 +1569,11 @@
   },
   "WoPan": {
     "access_token": "访问令牌",
+    "access_token-tips": "提供刷新令牌时可选；缺失或过短时会自动刷新",
     "family_id": "家庭 ID",
     "family_id-tips": "如果您想要使用您的个人空间，请保持为空",
     "refresh_token": "刷新令牌",
+    "refresh_token-tips": "请提供刷新令牌或访问令牌（至少 16 个字符）",
     "root_folder_id": "根文件夹 ID",
     "sort_rule": "排序规则",
     "sort_rules": {
@@ -1553,10 +1609,10 @@
   "cloudflare_imgbed": {
     "address": "地址",
     "address-tips": "图片托管服务的后端API地址，例如：https://img.example.com",
-    "largeChannelName": "大型通道名称",
-    "largeChannelName-tips": "大型文件通道名称",
-    "largeChannelType": "大型通道类型",
-    "largeChannelType-tips": "大文件通道类型：Hugging Face（直接上传）、telegram/cfr2/s3/discord(分块上传)",
+    "largeChannelName": "大文件渠道名称",
+    "largeChannelName-tips": "大文件的渠道名称",
+    "largeChannelType": "大文件渠道类型",
+    "largeChannelType-tips": "大文件渠道类型：Hugging Face（直接上传）校验、Telegram/Cf R2/S3/Discord（分片上传）",
     "largeChannelTypes": {
       "": "",
       "cfr2": "Cfr2",
@@ -1566,12 +1622,12 @@
       "telegram": "Telegram"
     },
     "root_folder_path": "根文件夹路径",
-    "smallChannelName": "小型道通名称",
-    "smallChannelName-tips": "普通文件(通常<20MB)的通道名称",
-    "token": "Token",
-    "token-tips": "身份验证令牌",
-    "uploadThread": "上传线程",
-    "uploadThread-tips": "HuggingFace分块直接上传的并发线程数"
+    "smallChannelName": "普通文件渠道名称",
+    "smallChannelName-tips": "普通文件的频道名称（通常<20MB）",
+    "token": "令牌",
+    "token-tips": "认证令牌",
+    "uploadThread": "上传线程数",
+    "uploadThread-tips": "HuggingFace 分片直接的上传线程数"
   },
   "config": {
     "115 Cloud": {},
@@ -1608,11 +1664,12 @@
     "Cloudreve": {},
     "Cloudreve V4": {},
     "Crypt": {},
+    "CtFile": {},
     "Degoo": {},
     "Doge": {},
     "Doubao": {},
     "DoubaoNew": {
-      "alert": "如果存储空间是公开可访问的，请不要使用302。\n否则，下载链接可能会泄露敏感信息，如访问令牌或签名。\n其他人可能会使用泄露的链接访问您的所有文件。"
+      "alert": "若存储可公开访问，则请勿使用302重定向。\n否则，下载链接可能泄露访问令牌、签名等敏感信息。\n他人可利用泄露的链接访问你所有的文件。"
     },
     "DoubaoShare": {},
     "Dropbox": {},
@@ -1625,7 +1682,7 @@
     "GoogleDrive": {},
     "GooglePhoto": {},
     "GuangYaPan": {
-      "alert": "两步短信登录：(1) 填写phone_number(如有需要还要填写captcha_token)，设置send_code=true并保存；(2) 填写verify_code并保存，完成登录并自动保存access_token/refresh_token。"
+      "alert": "教程：(1) 填写 手机号码（如需要，还需填写 验证令牌），打开 发送验证码 选项 并保存；(2) 填写 验证码 并保存，以完成登录，如果成功会自动保存 access_token/refresh_token。"
     },
     "HalalCloud": {},
     "HalalCloudOpen": {},
@@ -1709,10 +1766,11 @@
     "Cloudreve": "Cloudreve",
     "Cloudreve V4": "Cloudreve V4",
     "Crypt": "Crypt",
+    "CtFile": "城通网盘",
     "Degoo": "Degoo",
     "Doge": "多吉云",
     "Doubao": "豆包",
-    "DoubaoNew": "豆包New",
+    "DoubaoNew": "豆包云盘 新",
     "DoubaoShare": "豆包分享",
     "Dropbox": "Dropbox",
     "Emby": "Emby",
@@ -1746,7 +1804,7 @@
     "PikPak": "PikPak",
     "PikPakShare": "PikPak 分享",
     "ProtonDrive": "ProtonDrive",
-    "Quark": "夸克",
+    "Quark": "夸克网盘",
     "QuarkOpen": "夸克网盘 Open",
     "QuarkTV": "Quark TV",
     "S3": "对象存储",
@@ -1768,7 +1826,7 @@
     "USS": "又拍云存储",
     "UrlTree": "地址树",
     "Virtual": "虚拟存储",
-    "WPS": "WPS",
+    "WPS": "WPS 云文档",
     "WebDav": "WebDAV",
     "WeiYun": "腾讯微云",
     "WoPan": "联通云盘",

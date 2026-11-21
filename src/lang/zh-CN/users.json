@@ -1,9 +1,9 @@
 {
   "permissions": {
-    "see_hides": "可以看到隐藏",
+    "see_hides": "隐藏可见",
     "access_without_password": "无需密码访问",
     "offline_download": "添加离线下载任务",
-    "write_content": "编写内容（创建/上传/修改）",
+    "write_content": "写入内容（创建/上传/修改）",
     "rename": "重命名",
     "move": "移动",
     "copy": "复制",
@@ -23,7 +23,7 @@
   "role": "角色",
   "permission": "权限",
   "disabled": "停用",
-  "allow_ldap": "允许LDAP登录",
+  "allow_ldap": "允许通过 LDAP 登录",
   "available": "已启用",
   "update_profile": "更新个人资料",
   "update_profile_success": "更新个人资料成功，请重新登录。",

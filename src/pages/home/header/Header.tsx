@@ -3,14 +3,17 @@ import {
   HStack,
   useColorModeValue,
   Image,
+  Heading,
+  IconButton,
   Center,
   Icon,
   Kbd,
+  Text,
   CenterProps,
 } from "@hope-ui/solid"
 import { changeColor } from "seemly"
 import { Show, createMemo } from "solid-js"
-import { useRouter } from "~/hooks"
+import { useT, useRouter } from "~/hooks"
 import { getMainColor, getSetting, local, objStore, State } from "~/store"
 import { mediaEnabled } from "~/store/media"
 import { MediaSidebarTrigger } from "~/components/MediaSidebar"
@@ -22,11 +25,14 @@ import { Layout } from "./layout"
 import { isMac } from "~/utils/compatibility"
 
 export const Header = (props: { flush?: boolean } = {}) => {
+  const t = useT()
   const { pathname } = useRouter()
   // 媒体库页面有自己的视图切换，文件列表的布局切换对这里无意义
   const isMediaPage = () => pathname().startsWith("/@media")
   const logos = getSetting("logo").split("\n")
   const logo = useColorModeValue(logos[0], logos.pop())
+  const logotexts = getSetting("logo_text").split("\n")
+  const logotext = useColorModeValue(logotexts[0], logotexts.pop())
 
   const stickyProps = createMemo<CenterProps>(() => {
     switch (local["position_of_header_navbar"]) {
@@ -45,10 +51,16 @@ export const Header = (props: { flush?: boolean } = {}) => {
       justifyContent="space-between"
     >
       <HStack class="header-left" h="44px" spacing="$2">
-        <Show when={mediaEnabled()}>
-          <MediaSidebarTrigger />
-        </Show>
-        <Image src={logo()!} h="$full" w="auto" fallback={<CenterLoading />} />
+            {getSetting("logo") ? (
+              <Image
+                src={logo()!}
+                h="$full"
+                w="auto"
+                fallback={<CenterLoading />}
+              />
+            ) : (
+              <Heading size="lg">{logotext}</Heading>
+            )}
       </HStack>
       <HStack class="header-right" spacing="$2">
         <Show when={objStore.state === State.Folder}>
