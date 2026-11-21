@@ -9,8 +9,8 @@ cd ..
 tar -czvf compress/openlist-frontend-dist.tar.gz -C OpenList-Frontend/dist .
 
 # 构建 Lite 版本
-cd OpenList-Frontend
-rm -rf dist/*
-pnpm build:lite
-cd ..
-tar -czvf compress/openlist-frontend-dist-lite.tar.gz -C OpenList-Frontend/dist .
+# cd OpenList-Frontend
+# rm -rf dist/*
+# pnpm build:lite
+# cd ..
+# tar -czvf compress/openlist-frontend-dist-lite.tar.gz -C OpenList-Frontend/dist .
